@@ -34,7 +34,7 @@ N/A
 In this task I used for loops and if statements as well as variables. Below is an image the page once you inspect/console.
 
 
-<img width="2240" alt="Screenshot 2022-12-28 at 19 56 59" src="https://user-images.githubusercontent.com/116956128/211410067-4ef60583-efaf-4e4f-95ef-98dce00efc52.png">
+<img width="2240" alt="Screenshot 2023-01-09 at 21 16 52" src="https://user-images.githubusercontent.com/116956128/211410662-51e4c26d-001f-4bc3-94cd-e42bcab6f533.png">
 
 ## Deployment
 
