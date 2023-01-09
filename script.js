@@ -100,9 +100,14 @@ var upperCasedCharacters = [
 
 // // Function to generate password with user input
 function generatePassword() {
+
+
+  var passwordLength = prompt('How many characters would you like in your password 10-64?')
+  if (passwordLength < 10 || passwordLength > 64) {
+    alert(" that is not valid")
+    passwordLength = prompt('Enter how many characters between 10 and 64 that you want your password to be?')
+
   
-  
-  var passwordLength = prompt('How long do you want your password to be?')
   var upperCase = confirm(' Do you want upper case letters?');
   var lowerCase = confirm(' Do you want to use lower case letters?');
   var numbers = confirm(' do you want numbers in your password?');
@@ -111,7 +116,7 @@ function generatePassword() {
   var finalPassword = ''
 
 
-  
+
   if (upperCase) {
     answers.push(...upperCasedCharacters);
   };
@@ -126,7 +131,7 @@ function generatePassword() {
   if (special) {
     answers.push(...specialCharacters)
   }
-  
+
 
   for (let i = 0; i < passwordLength; i++) {
     console.log(i)
@@ -134,6 +139,7 @@ function generatePassword() {
   }
   console.log(finalPassword);
   return finalPassword;
+}
 }
 
 // Get references to the #generate element
