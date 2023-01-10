@@ -104,42 +104,43 @@ function generatePassword() {
 
   var passwordLength = prompt('How many characters would you like in your password 10-64?')
   if (passwordLength < 10 || passwordLength > 64) {
-    alert(" that is not valid")
-    passwordLength = prompt('Enter how many characters between 10 and 64 that you want your password to be?')
+    alert(" that is not valid");
 
-  
-  var upperCase = confirm(' Do you want upper case letters?');
-  var lowerCase = confirm(' Do you want to use lower case letters?');
-  var numbers = confirm(' do you want numbers in your password?');
-  var special = confirm(' Do you want special characters?')
-  var answers = []
-  var finalPassword = ''
+  } else {
 
 
+    var upperCase = confirm(' Do you want upper case letters?');
+    var lowerCase = confirm(' Do you want to use lower case letters?');
+    var numbers = confirm(' do you want numbers in your password?');
+    var special = confirm(' Do you want special characters?')
+    var answers = []
+    var finalPassword = ''
 
-  if (upperCase) {
-    answers.push(...upperCasedCharacters);
-  };
 
-  if (lowerCase) {
-    answers.push(...lowerCasedCharacters)
+
+    if (upperCase) {
+      answers.push(...upperCasedCharacters);
+    };
+
+    if (lowerCase) {
+      answers.push(...lowerCasedCharacters)
+    }
+    if (numbers) {
+      answers.push(...numericCharacters)
+
+    }
+    if (special) {
+      answers.push(...specialCharacters)
+    }
+
+
+    for (let i = 0; i < passwordLength; i++) {
+      console.log(i)
+      finalPassword += answers[Math.floor(Math.random() * answers.length)]
+    }
+    console.log(finalPassword);
+    return finalPassword;
   }
-  if (numbers) {
-    answers.push(...numericCharacters)
-
-  }
-  if (special) {
-    answers.push(...specialCharacters)
-  }
-
-
-  for (let i = 0; i < passwordLength; i++) {
-    console.log(i)
-    finalPassword += answers[Math.floor(Math.random() * answers.length)]
-  }
-  console.log(finalPassword);
-  return finalPassword;
-}
 }
 
 // Get references to the #generate element
